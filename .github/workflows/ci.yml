@@ -1,0 +1,16 @@
+name: First workflow
+on: 
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+
+   steps:
+     - name: Clonar repositorio
+       uses: actions/checkout@v4
+
+     - name: Imprimir algo
+       run: echo "hola algo"
